@@ -24,3 +24,9 @@ jobs:
         run: pio lib install
       - name: Build PlatformIO Project
         run: pio run
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware.bin
+          path: .pio/build/m5stack-core2/firmware.bin
