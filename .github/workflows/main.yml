@@ -1,6 +1,10 @@
 name: PlatformIO CI
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - '*.md'
+      - '*.txt'
 
 jobs:
   build:
@@ -13,6 +17,7 @@ jobs:
           path: |
             ~/.cache/pip
             ~/.platformio/.cache
+            ~/.pio
           key: ${{ runner.os }}-pio
       - uses: actions/setup-python@v5
         with:
