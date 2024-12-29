@@ -9,8 +9,6 @@
 #include <ESP32-targz.h> // optional: https://github.com/tobozo/ESP32-targz
 #include <M5StackUpdater.h>
 
-//test
-
 lv_obj_t *tabview, *tab_main, *tab_wifi, *tab_apps, *blabel, *kb, *label_USB, *label_CPU, *label_BAT, *Timelabel;
 
 #include "setup.hpp"
