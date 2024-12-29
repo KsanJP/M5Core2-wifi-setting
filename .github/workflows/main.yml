@@ -18,7 +18,8 @@ jobs:
             ~/.cache/pip
             ~/.platformio
             ~/.pio
-          key: ${{ runner.os }}-pio
+          key: ${{ runner.os }}-pio-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-pio-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
